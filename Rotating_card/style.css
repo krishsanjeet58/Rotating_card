@@ -1,0 +1,47 @@
+*{
+    margin:0%;
+    padding: 0%;
+}
+
+body{
+    perspective: 800px;
+}
+div{
+    height: 350px;
+    width: 500px;
+    border: 1px solid rgb(228, 221, 221);
+   
+}
+
+.side_a{
+    background-color:palegreen;
+    z-index: 2;
+}
+.side_a img{
+    height: 100%;
+    width: 100%;
+}
+
+.side_b{
+    background-color: palevioletred;
+    z-index: 1;
+    transform:rotateY(180deg);
+    padding: 15px;
+    text-align: center;
+}
+
+.wrapper{
+    position: relative;
+    margin: 20px auto;
+    transition: 1s;
+    transform-style: preserve-3d;   
+}
+
+.wrapper:hover{
+    transform: rotateY(180deg);
+    cursor: pointer;
+}
+.side_a,.side_b{
+    position: absolute;
+    backface-visibility: hidden;
+}
